@@ -1,32 +1,90 @@
-body {
-    min-width: 400px;
-    min-height: 100px;
-    color: rgb(221, 66, 92);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(229, 237, 241);
-    line-height: 1px;
-}
-
-p {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-size: 1rem;
 }
 
-button {
-    align-self: flex-start;
-    margin-left: 1em;
-    background-color: transparent;
+body {
+    min-width: 500px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(32, 32, 32);
+}
+
+hr {
     border: none;
-    color: rgb(221, 66, 92);
-    text-transform: uppercase;
+    height: 2px;
+    background-color: rgb(52,104,208);
+}
+
+.title {
+    padding: .8em;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.tasks {
+    padding: 1em;
+    width: 100%;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow-y: scroll;
+    border: 2px solid rgba(128, 128, 128, 0.4);
     border-radius: 5px;
+}
+
+.task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     padding: .5em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.task:last-of-type {
+    border-bottom: none;
+}
+
+.close {
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: rgb(221, 66, 92);
+.addTask {
+    margin-top: auto;
+    padding: 1em;
+    background-color: rgb(247,247,247);
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: .5em;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.add {
+    background-color: rgb(52,104,208);
+    padding: .5em;
+    flex-shrink: 0;
     color: white;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
 }
